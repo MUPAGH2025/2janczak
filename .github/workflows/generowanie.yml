@@ -1,1 +1,13 @@
-
+name: generowanie_pdf
+on: push
+jobs:
+  pdf:
+    runs-on: ubuntu-22.04
+    steps:
+      - run: sudo apt-get install inkscape pandoc texlive-xetex
+      - uses: actions/checkout@v4
+      - run: pip install ipykernel nbconvert pint open-atmos-jupyter-utils scipy
+      - run: python -m nbconvert --to pdf --execute LAB1.ipynb
+      - uses: actions/upload-artifact@v4
+        with:
+          path: sprawozdanie_lab1.pdf
