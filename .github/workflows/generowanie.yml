@@ -10,4 +10,4 @@ jobs:
       - run: python -m nbconvert --to pdf --execute LAB1.ipynb
       - uses: actions/upload-artifact@v4
         with:
-          path: sprawozdanie_lab1.pdf
+          path: LAB1.pdf
