@@ -8,14 +8,7 @@ jobs:
       - run: sudo apt-get install inkscape pandoc texlive-xetex
       - uses: actions/checkout@v4
       - run: pip install ipykernel nbconvert pint open-atmos-jupyter-utils scipy pympdata
-<<<<<<< HEAD
       - run: python -m nbconvert --to pdf --execute Marcel_Janczak_projekt1.ipynb --output Marcel_Janczak_projekt1.pdf
       - uses: actions/upload-artifact@v4
         with:
           path: Marcel_Janczak_projekt1.pdf
-=======
-      - run: python -m nbconvert --to pdf --execute projekt1.ipynb --output Marcel_Janczak_projekt1.pdf
-      - uses: actions/upload-artifact@v4
-        with:
-          path: Marcel_Janczak_projekt1.pdf
->>>>>>> 44149f3511895cee6a2ce4a19c55c650fe9428d0
